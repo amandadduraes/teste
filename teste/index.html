@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="assets/style.css"
+    />
+  </head>
+
+  <body>
+    <div class="painel">
+      <div class="painel-titulo">
+        Teste front-end
+        <button id="btnEnviar" class="botao-salvar" type="submit" onclick="cadastraTeste()">
+          Salvar
+        </button>
+      </div>
+      <div class="painel-corpo">
+        <form id="form" onSubmit="cadastraTeste()">
+          <div class="three-box spacing">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Nome"
+              data-max-length="40"
+            />
+            <div class="invalid-feedback" id="invalid-feedback-nome">Error</div>
+          </div>
+
+          <div class="three-box spacing">
+            <input
+              type="date"
+              class="form-control"
+              id="dateInitial"
+              placeholder="Data Inicial"
+              data-required
+            />
+            <div class="invalid-feedback" id="invalid-feedback-dataInit">
+              Error
+            </div>
+          </div>
+
+          <div class="three-box">
+            <input
+              type="date"
+              class="form-control"
+              id="dateEnd"
+              placeholder="Data Final"
+              data-required
+            />
+            <div class="invalid-feedback" id="invalid-feedback-dataFim">
+              Error
+            </div>
+          </div>
+
+          <div class="half-box spacing">
+            <select name="prop" id="prop" data-required>
+              <option value="0" selected disabled>Propriedades</option>
+              <option value="front">Front End</option>
+              <option value="arquitetura">Arquitetura</option>
+              <option value="back">Back End</option>
+            </select>
+            <div class="invalid-feedback" id="invalid-feedback-selectprop">
+              Error
+            </div>
+          </div>
+
+          <div class="half-box">
+            <select name="lab" id="lab" data-required>
+              <option value="0" selected disabled>Laboratório</option>
+              <option value="vila">Vila Nova</option>
+              <option value="jeri">Jeripa</option>
+              <option value="novo">Novo Mundo</option>
+            </select>
+            <div class="invalid-feedback" id="invalid-feedback-selectlab">
+              Error
+            </div>
+          </div>
+
+          <div class="full-box">
+            <textarea
+              id="message"
+              cols="6"
+              rows="5"
+              placeholder="Observações"
+              data-min-length="0"
+              maxlength="1000"
+              data-max-length="40"
+            ></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <p class="error-validation template"></p>
+    <script src="assets/main.js"></script>
+  </body>
+</html>
